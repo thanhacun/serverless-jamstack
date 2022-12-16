@@ -78,7 +78,7 @@ const searchHandler = async function() {
   let search = document.getElementById("search").value;
   searchSummary.innerHTML = '';
   searchContent.innerHTML = '';
-  let searchUrl = "/algolia/getTho" + "?search=" + search;
+  let searchUrl = "/serverless-jamstack2/algolia/getTho" + "?search=" + search;
   // let searchUrl = "https://faas-sgp1-18bc02ac.doserverless.co/api/v1/web/fn-7a547e63-4a3e-4a00-9798-b26f58c99213/algolia/getTho" + "?search=" + search;
   const result = await axios.get(searchUrl);
   // localStorage.setItem("search", search);
