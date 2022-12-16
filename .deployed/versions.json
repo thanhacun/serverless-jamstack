@@ -1,0 +1,14 @@
+[
+  {
+    "apihost": "https://faas-sgp1-18bc02ac.doserverless.co",
+    "namespace": "fn-7a547e63-4a3e-4a00-9798-b26f58c99213",
+    "packageVersions": {},
+    "actionVersions": {
+      "algolia/getTho": {
+        "digest": "e242bf08cf813f9b72af91121f0daadf6f27d5be59367ce505e746253a354c63",
+        "version": "0.0.13"
+      }
+    },
+    "webHashes": {}
+  }
+]

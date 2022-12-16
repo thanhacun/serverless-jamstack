@@ -11,10 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>DigitalOcean Coffee</title>
+    <title>Tho Kim Bong Mieu</title>
   </head>
   <body>
-    <div class="modal fade" tabindex="-1" id="testModal">
+    <!-- <div class="modal fade" tabindex="-1" id="testModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -35,10 +35,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-brown">
-      <a class="navbar-brand" href="#">DigitalOcean Coffee</a>
+      <a class="navbar-brand" href="#">Thơ Kim Bồng Miêu</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,7 +46,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="#">Về tác giả</a>
           </li>
       </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -60,17 +60,20 @@
       </div>
     </nav>
 
-    <h1 style="text-align: center; color: bisque;">DigitalOcean Coffee</h1>
+    <h1 style="text-align: center; color: bisque;">Thơ Kim Bồng Miêu</h1>
     <table id="product-table">
     </table>
-    <form id="email-form">
-        <label for="email">Subscribe to our newsletter:</label>
-        <input type="email" id="email" name="email" class="email-field">
-        <button class="button" id="subscribe" type="button">Submit</button>
+    <form id="search-form">
+        <label for="email">Nhập nội dung tìm kiếm:</label>
+        <input type="search" id="search" name="search" class="search-field">
+        <button class="button" id="search_button" type="button">Tìm kiếm</button>
+        <p id="search_summary"></p>
     </form>
     <div class="functions"></div>
+    <div class="results" id="search_content"></div>
 
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
       <script>
         document.body.onload = function(){
             localStorage.clear();
