@@ -1,6 +1,9 @@
 const algoliasearch = require("algoliasearch");
 const dotenv = require("dotenv");
+// const path = require("path");
 
+// current_dir = process.cwd();
+// dotenv.config({path: path.join(current_dir, "..", "..", "..", "/.env")});
 dotenv.config();
 
 const ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
@@ -30,7 +33,7 @@ async function main(args){
         console.error(e);
         return {
             "body": {"error": "There was a problem searching for "},
-            "statusCode": 400
+            "statusCode": 500
         };
     }
 }
