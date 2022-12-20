@@ -1,7 +1,12 @@
 packages:
   - name: algolia
+    environment:
+      ALGOLIA_APP_ID: "${ALGOLIA_APP_ID}"
+      ALGOLIA_API_KEY: "${ALGOLIA_API_KEY}"
+      ALGOLIA_INDEX_NAME: ${ALGOLIA_INDEX_NAME}
     actions:
       - name: getTho
         limits:
           timeout: 5000
           memory: 256
+
