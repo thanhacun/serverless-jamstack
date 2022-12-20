@@ -1,15 +1,16 @@
 const algoliasearch = require("algoliasearch");
 const dotenv = require("dotenv");
-const fs = require("fs");
+// const fs = require("fs");
 // const path = require("path");
 
 // current_dir = process.cwd();
 // dotenv.config({path: path.join(current_dir, "..", "..", "..", "/.env")});
 
-const path = "./.env";
-if (fs.existsSync(path)) {
-    dotenv.config();
-} 
+// const env_path = path.join(process.env.PWD, "..", "/.env");
+// if (fs.existsSync(env_path)) {
+//     dotenv.config();
+// } 
+dotenv.config();
 const ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
 const ALGOLIA_API_KEY = process.env.ALGOLIA_API_KEY;
 const ALGOLIA_INDEX_NAME = process.env.ALGOLIA_INDEX_NAME;
