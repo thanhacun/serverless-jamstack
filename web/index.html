@@ -63,14 +63,14 @@
     <h1 style="text-align: center; color: bisque;">Thơ Kim Bồng Miêu</h1>
     <table id="product-table">
     </table>
-    <form id="search-form">
-        <label for="email">Nhập nội dung tìm kiếm:</label>
-        <input type="search" id="search" name="search" class="search-field">
-        <button class="button" id="search_button" type="button">Tìm kiếm</button>
-        <p id="search_summary"></p>
+    <form id="search-form" class="text-center">
+        <label for="search">Tìm kiếm:</label>
+        <input type="search" id="search" name="search" class="search-field" placeholder="Nhập từ cần tìm">
+        <button class="button" id="search_button" type="button">Tìm thơ</button>
+        <p class="text-center text-danger" id="search_summary"></p>
     </form>
     <div class="functions"></div>
-    <div class="results" id="search_content"></div>
+    <div class="results text-center" id="search_content"></div>
 
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>

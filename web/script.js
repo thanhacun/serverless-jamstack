@@ -84,12 +84,15 @@ const searchHandler = async function() {
   // localStorage.setItem("search", search);
   document.getElementById("search").value = '';
 
-  const message = "Có " + String(result.data.length) + " kết quả";
+  const message = result.data.length ? "(Có " + String(result.data.length) + " kết quả)" : "(Không có kết quả)";
   searchSummary.innerHTML = message;
 
   result.data.forEach(e => {
     let childTho = document.createElement('div');
-    childTho.innerHTML = marked.parse(e.content);
+    // childTho.innerHTML = marked.parse(e.content);
+    let highlightValue = e._highlightResult.content.value;
+    highlightValue = highlightValue.replaceAll("\<em>", '<em class="text-danger">');
+    childTho.innerHTML = marked.parse(highlightValue);
     searchContent.appendChild(childTho);
   })
 }
