@@ -10,7 +10,7 @@ const dotenv = require("dotenv");
 // if (fs.existsSync(env_path)) {
 //     dotenv.config();
 // } 
-dotenv.config();
+// dotenv.config();
 const ALGOLIA_APP_ID = process.env.ALGOLIA_APP_ID;
 const ALGOLIA_API_KEY = process.env.ALGOLIA_API_KEY;
 const ALGOLIA_INDEX_NAME = process.env.ALGOLIA_INDEX_NAME;
@@ -20,7 +20,10 @@ const index = client.initIndex(ALGOLIA_INDEX_NAME);
 
 function searchForText(index=index, searchText) {
     return new Promise(resolve => {
-        index.search(searchText).then((objects) => {
+        index.search(searchText, {
+            getRankingInfo: true,
+            advancedSyntax: true
+        }).then((objects) => {
             resolve({
                 "body": objects.hits,
                 "statusCode": 200
