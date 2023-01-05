@@ -36,41 +36,42 @@
         </div>
       </div>
     </div> -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-brown">
+        <a class="navbar-brand" href="#">Thơ Kim Bồng Miêu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Về tác giả</a>
+            </li>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <button id="btnShow" type="button">
+                <a class="nav-link"><img id="cart" src="/assets/shopping-cart.png"></a>
+                <p id="order-quantity">0</p>
+              </button>
+            </li>
+        </div>
+      </nav>
+      <div class="row">
+        <h1 style="text-align: center; color: bisque;">Thơ Kim Bồng Miêu</h1>
+        <form id="search-form" class="text-center">
+            <label for="search">Tìm kiếm:</label>
+            <input type="search" id="search" name="search" class="search-field" placeholder="Nhập từ cần tìm">
+            <button class="button" id="search_button" type="button">Tìm thơ</button>
+            <p class="text-center text-danger" id="search_summary"></p>
+        </form>
+        <div class="results text-center" id="search_content"></div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-brown">
-      <a class="navbar-brand" href="#">Thơ Kim Bồng Miêu</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Về tác giả</a>
-          </li>
       </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <button id="btnShow" type="button">
-              <a class="nav-link"><img id="cart" src="/assets/shopping-cart.png"></a>
-              <p id="order-quantity">0</p>
-            </button>
-          </li>
-      </div>
-    </nav>
 
-    <h1 style="text-align: center; color: bisque;">Thơ Kim Bồng Miêu</h1>
-    <table id="product-table">
-    </table>
-    <form id="search-form" class="text-center">
-        <label for="search">Tìm kiếm:</label>
-        <input type="search" id="search" name="search" class="search-field" placeholder="Nhập từ cần tìm">
-        <button class="button" id="search_button" type="button">Tìm thơ</button>
-        <p class="text-center text-danger" id="search_summary"></p>
-    </form>
-    <div class="functions"></div>
-    <div class="results text-center" id="search_content"></div>
+    </div>
 
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>

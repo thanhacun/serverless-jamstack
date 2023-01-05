@@ -1,3 +1,12 @@
+Simple serverless deploy for Kim Bong Mieu poems.
+* Search for poem using Algolia API
+* Pagination
+* Picture on Poem
+
+This repo based on Digital Ocean serverless Jamstack
+
+
+Original:
 This repo contains sample code for a serverless Jamstack tutorial that teaches users how to intergrate serverless functions into their Jamstack site. The tutorial will be published soon at docs.digitalocean.com.
 
 Once you complete the tutorial, the sample website contains:
