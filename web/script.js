@@ -80,13 +80,13 @@ const searchHandler = async function() {
   searchSummary.innerHTML = '';
   searchContent.innerHTML = '';
   let searchUrl = "/tcct/api/algolia/getTho" + "?search=" + search;
-  // let searchUrl = "https://faas-sgp1-18bc02ac.doserverless.co/api/v1/web/fn-7a547e63-4a3e-4a00-9798-b26f58c99213/algolia/getTho" + "?search=" + search;
+  // searchUrl = "https://faas-sgp1-18bc02ac.doserverless.co/api/v1/web/fn-7a547e63-4a3e-4a00-9798-b26f58c99213/algolia/getTho" + "?search=" + search;
   const result = await axios.get(searchUrl);
   // console.log(result);
   // localStorage.setItem("search", search);
   document.getElementById("search").value = '';
 
-  const message = result.data.length ? "(Có " + String(result.data.length) + " kết quả)" : "(Không có kết quả)";
+  const message = result.data.length ? "(Có " + String(result.data.length) + " kết quả cho: [" + String(search) + "])" : "(Không có kết quả)";
   searchSummary.innerHTML = message;
 
   result.data.forEach(e => {
