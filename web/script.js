@@ -79,8 +79,8 @@ const searchHandler = async function() {
   let search = document.getElementById("search").value;
   searchSummary.innerHTML = '';
   searchContent.innerHTML = '';
-  // let searchUrl = "/tcct/api/algolia/getTho" + "?search=" + search;
-  let searchUrl = "https://faas-sgp1-18bc02ac.doserverless.co/api/v1/web/fn-7a547e63-4a3e-4a00-9798-b26f58c99213/algolia/getTho" + "?search=" + search;
+  let searchUrl = "/tcct/api/algolia/getTho" + "?search=" + search;
+  // let searchUrl = "https://faas-sgp1-18bc02ac.doserverless.co/api/v1/web/fn-7a547e63-4a3e-4a00-9798-b26f58c99213/algolia/getTho" + "?search=" + search;
   const result = await axios.get(searchUrl);
   // console.log(result);
   // localStorage.setItem("search", search);
