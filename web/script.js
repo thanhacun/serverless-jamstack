@@ -71,6 +71,7 @@
 
 // Search for tho handler
 let searchButton = document.getElementById("search_button");
+let searchForm = $(document.getElementById("search_form"));
 
 const searchHandler = async function() {
   let searchContent = document.getElementById("search_content");
@@ -78,8 +79,8 @@ const searchHandler = async function() {
   let search = document.getElementById("search").value;
   searchSummary.innerHTML = '';
   searchContent.innerHTML = '';
-  let searchUrl = "/tcct/api/algolia/getTho" + "?search=" + search;
-  // let searchUrl = "https://faas-sgp1-18bc02ac.doserverless.co/api/v1/web/fn-7a547e63-4a3e-4a00-9798-b26f58c99213/algolia/getTho" + "?search=" + search;
+  // let searchUrl = "/tcct/api/algolia/getTho" + "?search=" + search;
+  let searchUrl = "https://faas-sgp1-18bc02ac.doserverless.co/api/v1/web/fn-7a547e63-4a3e-4a00-9798-b26f58c99213/algolia/getTho" + "?search=" + search;
   const result = await axios.get(searchUrl);
   // console.log(result);
   // localStorage.setItem("search", search);
@@ -97,16 +98,38 @@ const searchHandler = async function() {
     searchContent.appendChild(childTho);
   })
 }
+
 searchButton.addEventListener('click', searchHandler);
+searchForm.addEventListener('submit', function(e){
+  console.log(e);
+  stopImmediatePropagation();
+  e.preventDefault();
+  searchHandler();
+  // return searchHandler;
+})
+// searchBox.addEventListener('keypress', function(e){
+//   if (e.key === 'Enter'){
+//     console.log(e);
+//     searchHandler();
+//   }
+// })
+
+// searchBox$.keyup(function(event){
+//   console.log(event.which);
+//   if (event.which === 13) {
+//     event.preventDefault();
+//     // $(searchButton).click();
+//   }
+// })
 
 // start of shopping cart modal handler 
 
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+// $('#myModal').on('shown.bs.modal', function () {
+//   $('#myInput').trigger('focus')
+// })
 
-const container = document.getElementById("testModal");
-const modal = new bootstrap.Modal(container);
+// const container = document.getElementById("testModal");
+// const modal = new bootstrap.Modal(container);
 
 // document.getElementById("btnShow").addEventListener("click", function () {
 //   modal.show();
