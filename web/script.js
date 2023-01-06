@@ -71,7 +71,7 @@
 
 // Search for tho handler
 let searchButton = document.getElementById("search_button");
-let searchForm = $(document.getElementById("search_form"));
+let searchForm = document.getElementById("search-form");
 
 const searchHandler = async function() {
   let searchContent = document.getElementById("search_content");
@@ -101,72 +101,6 @@ const searchHandler = async function() {
 
 searchButton.addEventListener('click', searchHandler);
 searchForm.addEventListener('submit', function(e){
-  console.log(e);
-  stopImmediatePropagation();
   e.preventDefault();
   searchHandler();
-  // return searchHandler;
 })
-// searchBox.addEventListener('keypress', function(e){
-//   if (e.key === 'Enter'){
-//     console.log(e);
-//     searchHandler();
-//   }
-// })
-
-// searchBox$.keyup(function(event){
-//   console.log(event.which);
-//   if (event.which === 13) {
-//     event.preventDefault();
-//     // $(searchButton).click();
-//   }
-// })
-
-// start of shopping cart modal handler 
-
-// $('#myModal').on('shown.bs.modal', function () {
-//   $('#myInput').trigger('focus')
-// })
-
-// const container = document.getElementById("testModal");
-// const modal = new bootstrap.Modal(container);
-
-// document.getElementById("btnShow").addEventListener("click", function () {
-//   modal.show();
-//   $('#modal-table tr:not(:first)').remove();
-//   let orderData = JSON.parse(localStorage.getItem("order"));
-//   let table = document.getElementById("modal-table");
-
-//   orderData.forEach(item => {
-//   let name = item.name;
-//   let price = item.price;
-
-//   let newRow = table.insertRow(-1);
-//   let nameCell = newRow.insertCell();
-//   let priceCell = newRow.insertCell();
-
-//   let nameText = document.createElement("p");
-//   nameText.innerHTML = name;
-
-//   let priceText = document.createElement("p");
-//   priceText.innerHTML = "$" + price;
-
-//   nameCell.appendChild(nameText);
-//   priceCell.appendChild(priceText);
-//   })
-  
-//   let grandTotal = localStorage.getItem("total");
-//   let newRow = table.insertRow(-1);
-//   let totalCell = newRow.insertCell();
-//   let grandTotalCell = newRow.insertCell();
-
-//   let totalText = document.createElement("h3");
-//   console.log(totalText); 
-//   totalText.innerHTML = "Grand total: "
-//   let grandTotalText = document.createElement("h3");
-//   grandTotalText.innerHTML = "$" + grandTotal;
-
-//   totalCell.appendChild(totalText);
-//   grandTotalCell.appendChild(grandTotalText);
-
-// });
