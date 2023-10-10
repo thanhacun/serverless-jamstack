@@ -9,4 +9,8 @@ packages:
         limits:
           timeout: 5000
           memory: 256
+      - name: postTho
+        limits:
+          timeout: 5000
+          memory: 256
 

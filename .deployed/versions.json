@@ -5,8 +5,12 @@
     "packageVersions": {},
     "actionVersions": {
       "algolia/getTho": {
-        "digest": "e242bf08cf813f9b72af91121f0daadf6f27d5be59367ce505e746253a354c63",
-        "version": "0.0.13"
+        "digest": "b2fc481cab0929181497851b64c3aac31e578f5d0db2870cbe4f7ea12aaf27c1",
+        "version": "0.0.28"
+      },
+      "algolia/postTho": {
+        "digest": "56d18f1273b789576d6abc9df0955cc3dc53880f43083501da004db52fd7606d",
+        "version": "0.0.1"
       }
     },
     "webHashes": {}
